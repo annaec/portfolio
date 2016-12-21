@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Text Adventure</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+	</head>
+	<body>
+		<div id="container">
+
+						<p id="messageStartGame">
+					Welcome to an unknown world. To navigate this new realm, type "HELP."
+				</p>
+
+			<div id="console">
+				
+
+
+				<p id="northPath">
+					You are approaching the Southern Gate to the Castle grounds. You see a glint of light obscured in the soil and crouch towards it, wiping away the leaves and earth to find ... a sword!
+				</p>
+
+				<ul id="messageHelp">
+					<li><strong>COMMANDS:</strong></li>
+					<li>ENGAGE: Engage with your surroundings</li>
+					<li>MOVE [DIRECTION]: Move North, South, East, or West</li>
+					<li>PICK UP [OBJECT]: Add a new item to your supply</li>
+					<li>USE [OBJECT]: Use an object</li>
+					<li>HELP: View commands</li>
+					<li>NEW NAME: Enter a new player name</li>
+				</ul>
+
+				<!-- PLACEHOLDER: THIS SITS BELOW ALL NEW MESSAGES -->
+				<div id="placeholder"></div>
+
+				<form onsubmit="return false;">
+					<input id="commandLine" type="text" autofocus="autofocus" autocomplete="off">
+						<!-- <span class="blinking-cursor"></span> -->
+					</input>
+				</form>
+
+			</div><!-- #console -->
+
+
+
+			<div id="map">
+				<div class="realms" id="northWest">
+					<img src="images/diamond.svg">
+				</div>
+				<div class="realms" id="northGate">
+					<img src="images/wine.svg">
+				</div>
+				<div class="realms" id="northEast">
+					<img src="images/coat.svg">
+				</div>
+				<div class="realms" id="west">
+					<img src="images/torches.svg">
+				</div>
+				<div class="realms" id="castle">
+					<img src="images/castle.svg">
+				</div>
+				<div class="realms" id="east">
+					<img src="images/bread.svg">
+				</div>
+				<div class="realms" id="southWest">
+					<img src="images/mirror.svg">
+				</div>
+				<div class="realms mapArrival" id="southGate">
+					<img src="images/sword.svg">
+				</div>
+				<div class="realms" id="southEast">
+					<img src="images/dagger.svg">
+				</div>
+			</div><!-- #map -->
+
+			<div id="inventory">
+				<h2>PLAYER INVENTORY</h2>	
+			</div>
+
+			<div id="credits">
+				<h5>ICON CREDITS: Wine, torch, castle, bread, mirror, sword, and dagger by Freepik. Diamond by Madebyoliver. All icons sourced from www.flaticon.com</h5>
+			</div>
+			
+		</div><!-- #container --> 
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="practice.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,618 @@
+/* 
+Project Name: Cataldo Resume
+Client: FEWD
+Author: Anna Cataldo
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: rgb(0, 0, 0);
+     font-size: 13px;
+     line-height: 1.5;
+     font-family: helvetica;
+/*     margin: 30px;
+     padding: 30px;*/
+
+}
+
+body::-webkit-scrollbar { 
+     width: 0 !important; 
+     -ms-overflow-style: none;
+}
+
+#container {
+     margin: 10%;
+}
+
+a {
+  position: relative;
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  font-style:italic;
+}
+
+
+.eye {
+     width: 7%;
+     margin: -7% 0 0 12%;
+     padding-left: 2.2%;
+     position:inherit;
+     float:left;
+}
+
+.eye:hover {
+     transform: rotateX(180deg);
+     transition: .45s ease-in-out;
+     transition-delay:none;
+}
+
+.underline {
+  background-image: url("../images/curve.svg");
+  background-position: -.4em .8em;
+  background-size: 160% 50%;
+  background-repeat: repeat-x;
+  padding-bottom: 1em;
+  color:black
+}
+
+#underlineILWeb {
+  font-size:2em;
+  background-position: -.4em .8em;
+  background-size: 100% 50%;
+  padding-bottom: 1em;
+}
+
+#underlineILAir {
+  font-size:2em;
+  background-position: -.4em .8em;
+  background-size: 70% 50%;
+  padding-bottom: 1em;
+}
+
+#underlineGame {
+  font-size:2em;
+  background-position: -.4em .8em;
+  background-size: 140% 50%;
+  padding-bottom: 1em;
+}
+
+#underlinePlay {
+  font-size:2em;
+  background-position: -.4em .8em;
+  background-size: 120% 50%;
+  padding-bottom: 1em;
+}
+
+.underline:hover {
+     animation: underline none 3.5s linear infinite;
+     color:black;
+}
+
+@keyframes underline {
+     0% {background-position: -.4em .8em}
+     100%{background-position: -240px .8em}
+}
+
+/*#underline {
+  background-image: url("../images/underline.svg");
+  background-position: -.3em 1.3em;
+  background-size: 143.5%;
+  background-repeat: repeat-x;
+  padding-bottom: 1em;
+}
+
+#underline:hover {
+     animation: underline none 3.5s linear infinite;
+}
+
+@keyframes underline {
+     0% {background-position: -.3em 1.3em}
+     100%{background-position: -240px 1.3em}
+}*/
+/*a:hover:before {
+  visibility: visible;
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0px;
+  background: #000;
+  visibility: hidden;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}*/
+
+
+h1{
+     font-size: 45px;
+     font-weight: normal;
+     letter-spacing: 4.13px;
+     margin: 0px;
+}
+
+.contact {
+     display:inline-block;
+     font-size: 17.23px;
+     letter-spacing: 2px;
+     margin-top: -10%;   
+}
+
+.contact p{
+     margin: 0;
+}
+
+.topnav{
+     display: inline-block;
+     text-align: right;
+     font-size:2.5em;
+     letter-spacing: 1.5px;
+      margin: -8% 4% 0 0;
+      position:fixed;
+      left: 55%;
+}
+
+.topnav a{
+     color: blue;
+     text-decoration: none;
+}
+
+.topnav a:hover{
+     font-style: italic;
+}
+
+
+/******************************************
+/* ABOUT                   
+/*******************************************/
+
+.content p{
+     font-size: 2.8em;
+     letter-spacing: 1px;
+     padding: 2%;
+     width: 95%;
+     margin: 0 auto;
+     line-height:1.5;
+}
+
+/******************************************
+/* RESUNE                   
+/*******************************************/
+
+#resume {
+     margin: 5%;
+}
+
+h2{
+     letter-spacing: 2px;
+     margin-bottom: 2%;
+}
+
+.education{
+     letter-spacing: .5px;
+}
+
+.education p{
+     margin: 0px;
+}
+
+.school{
+     margin-bottom: 10px;
+}
+
+.experience {
+     letter-spacing: .5px;
+}
+
+.experience p{
+     margin-bottom: 0px;
+}
+
+.experience ul{
+     margin-top: 5px;
+     padding-left: 16px;
+}
+
+footer{
+     margin-left: 4%;
+}
+
+.bottomnav{
+     line-height: 0;
+}
+
+.bottomnav img{
+     width: 5%;
+     padding: 15px;
+     padding-bottom: 0px;
+     padding-left: 0px;
+     float: left;
+}
+
+#linked {
+     margin-left:.3%;
+}
+
+.bottomnav img:hover{
+  transform:rotateY(180deg);
+  transition: .4s ease-in-out;
+}
+
+
+/******************************************
+/* DOWN ARROW ANIMATION                   
+/*******************************************/
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10px;
+  left: 88%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/down-arrow.svg);
+  background-size: contain;
+}
+
+.bounce {
+  -moz-animation: bounce 2s linear;
+  -webkit-animation: bounce 2s linear;
+  animation: bounce 2s linear;
+}
+
+.flip {
+     transform:rotateX(180deg);
+     transition: .5s ease-in;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+.containerWork {
+  margin-left: 7% !important;
+}
+
+#workContent {
+  font-size: .8em;
+}
+
+#workContent p {
+  width: 87%;
+  margin:0 auto;
+}
+
+#workContent img {
+  width: 40%;
+  margin: 2%;
+  border:2px solid black;
+  box-shadow:0 4px 2px -2px rgba(0,0,0,0.4);
+}
+
+#workContent img:hover {
+  transform: scale(1.05);
+  transition: .35s ease-in-out;
+  transition-delay:none;
+}
+
+
+#underlineILWeb {
+  font-size:1em;
+  background-position: -.4em .8em;
+  background-size: 210% 50%;
+  padding-bottom: 1em;
+}
+
+#underlineGame {
+  font-size:1em;
+  background-position: -.4em .8em;
+  background-size: 300% 50%;
+  padding-bottom: 1em;
+}
+
+#underlineAnimation {
+  font-size:1em;
+  background-position: -.4em .8em;
+  background-size: 190% 50%;
+  padding-bottom: 1em;
+}
+
+#ilWebImages {
+  width: 98%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+  text-align:center;
+}
+
+#game, #play {
+  width: 45%;
+  margin:0;
+  float:left;
+}
+
+#game p, #play p {
+  width:98%;
+}
+
+#play p {
+  margin-left:-3%;
+}
+
+#game {
+  margin-left: 7.5%;
+}
+
+#game img {
+  width: 88%;
+}
+
+#play img {
+  width: 90%;
+  padding-top:6%;
+  margin-left: -2%;
+}
+
+.hidden {
+  transform: translateY(-1000px);
+  transition: .3s ease-in;
+}
+
+
+.condensedNav:hover{
+  color: black;
+  background-color:white;
+  border: 3px solid black;
+}
+
+
+.condensedNav{
+  color:white;
+  background-color:black;
+  font-family: Helvetica;
+  border: 3px solid black;
+  width: 65px;
+  height: 60px;
+  padding: 10px;
+  float: left;
+  margin:-10% 0 0 85%;
+  display:none;
+}
+
+.condensedNav h5{
+  margin: -6% 0 0 0;
+  font-size: 1.2em;
+  letter-spacing: .9em;
+}
+
+
+/******************************************
+/* between 1024 and 930
+/*******************************************/
+
+
+@media(max-width: 1024px) and (min-width: 950px)  {
+  .content p{
+    font-size: 2.7em;
+  }
+
+  .topnav {
+    font-size: 2.4em;
+    left: 52%;
+  }
+
+  .eye {
+    width: 8.5%;
+  }
+}
+
+@media(max-width: 949px) and (min-width: 820px)  {
+  .content p{
+    font-size: 2.5em;
+    padding-top:6%;
+  }
+
+  .topnav {
+    font-size: 2.2em;
+    left:49%;
+    margin-top:-7%;
+    display:none;
+  }
+
+  .eye {
+    margin-top:-6%;
+    width:8.5%;
+  }
+
+  .condensedNav {
+    display:block;
+  }
+}
+
+@media(max-width: 819px) and (min-width: 700px)  {
+  .content p{
+    font-size: 2.3em;
+    padding-top:8%;
+  }
+
+  .topnav {
+    font-size: 2em;
+    left:46.5%;
+    margin-top:-6%;
+    display:none;
+  }
+
+  .eye {
+    margin-top:-5%;
+    width:9.5%;
+  }
+
+  #resume {
+    padding-top:4%;
+  }
+
+    .condensedNav {
+    display:block;
+  }
+}
+
+@media(max-width: 699px) and (min-width: 540px)  {
+  .content p{
+    font-size: 2em;
+    padding-top:14%;
+  }
+
+  .topnav {
+    font-size: 1.7em;
+    left:44%;
+    margin-top:-5%;
+    display:none;
+  }
+
+  .eye {
+    margin-top:-3%;
+    width: 11%;
+  }
+
+  #resume {
+    padding-top:4.5%;
+  }
+
+    .condensedNav {
+    display:block;
+    margin-left: 80%;
+  }
+}
+
+@media(max-width: 539px) and (min-width: 445px)  {
+  .content p{
+    font-size: 1.8em;
+    padding-top:18%;
+  }
+
+  .topnav {
+    font-size: 1.5em;
+    left:40%;
+    margin-top:-4%;
+    display:none;
+  }
+
+  .eye{
+    margin-top:-2.5%;
+    width:13%;
+  }
+
+  #resume {
+    padding-top:5%;
+  }
+
+    .condensedNav {
+    display:block;
+    margin-left: 80%;
+    margin-top: -12%;
+  }
+}
+
+@media only screen and (max-width: 445px)  {
+  .content p{
+    font-size: 1.6em;
+    padding-top:30%;
+  }
+
+  .topnav {
+    font-size: 1.3em;
+    left:39%;
+    margin-top:-.5%;
+    display:none;
+  }
+
+    .eye{
+    margin-top:0%;
+    width:14%;
+  }
+
+  #resume {
+    padding-top:8%;
+  }
+
+    .condensedNav {
+    display:block;
+    margin: -14% 0 0 70%;
+  }
+}

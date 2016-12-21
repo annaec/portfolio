@@ -1,0 +1,875 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica;
+     overflow: auto;
+}
+
+
+
+/******************************************
+/* UNIVERSAL               
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 100%;
+	margin: auto;
+}
+
+a {
+     text-decoration: none;
+  /*   color: blue;*/
+  color:white;
+}
+
+li {
+     float: right;
+     margin: 2%;
+     padding: 1%;
+     font-size: 1.3em;
+     letter-spacing: .3em;
+}
+
+.activeNav {
+  border-bottom: 2px solid blue;
+  padding: 1%;
+
+}
+button:hover {
+  background-color: blue;
+  color: white;
+}
+
+button {
+  text-decoration: none;
+  font-size: 1.3em;
+  letter-spacing: .3em;
+  color: blue;
+  background-color: white;
+  border: 2px solid blue;
+  padding: 1%;
+  margin: 2%;
+}
+
+
+@font-face{
+  font-family: "menlo";
+  src: url("Menlo-Regular.ttf");
+}
+
+.dropNav {
+  font-family: Helvetica;
+  text-transform: lowercase;
+  background: black;
+  color: white;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  transition: .8s;
+  transition-delay: none;
+}
+
+.dropNav ul{
+  padding:0;
+}
+
+.dropNav li, .drovNav a {
+  float: none;
+  font-size: 3em;
+  color:white;
+  border:none;
+  margin:7% 10%;
+}
+
+.dropNav li:hover{
+  border-bottom: 2px solid blue;
+}
+
+nav li:hover {
+  font-style: italic;
+}
+
+.dropNav .condensedNav {
+  text-transform: uppercase;
+  border: 3px solid white;
+  margin-top: 6%;
+  margin-left:78%;
+
+}
+
+#containerArts .dropNav .condensedNav, #coworkingHeader .dropNav .condensedNav, #eventsHeader .dropNav .condensedNav {
+  margin-left:78%;
+
+}
+
+.dropNav .condensedNav:hover{
+  color: black;
+  background-color:white;
+  border: 2px solid black;
+}
+
+
+.condensedNav{
+  font-family: Helvetica;
+  width: 65px;
+  height: 60px;
+  margin: 3% 0%;
+  padding: 10px;
+  border: 3px solid black;
+  letter-spacing: .9em;
+  font-size: 1.3em;
+  font-weight: bold;
+  float: left;
+  margin-left: 74%;
+  display:block;
+}
+
+.condensedNav h5{
+  margin: 0;
+  font-size: 1em;
+}
+
+.condensedNav:hover {
+  color: white;
+  background: black;
+  border: 3px solid black;
+}
+
+.hiddenNav{
+  right: -100%;
+  transition: 1s;
+  transition-delay: .1s;
+
+}
+
+#logoHome:hover {
+  transform: rotateY(360deg);
+  transition: .8s ease-in-out;
+}
+
+
+
+
+/******************************************
+/* HOME                
+/*******************************************/
+
+#containerHome {
+  background: url(../images/heloisa1-new3.png);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  height: 100%;
+  overflow:hidden;
+}
+
+#homeHeader h1{
+     text-align: center;
+     font-size: 7em;
+     letter-spacing: .5em;
+     margin-bottom: 7%;
+     font-family: Helvetica;
+     margin-left: 4.5%;
+}
+
+#altHomeLink{
+  color:black;
+}
+
+#navHome {
+ width: 1350px;
+ margin: 0 auto;
+}
+
+#navList{
+  font-family: helvetica;
+  letter-spacing: .35em;
+  margin-top: 22%;
+}
+
+#navList li, #navList a {
+  list-style: none;
+  float: left;
+  margin: 4%;
+  margin-left: 0;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: blue;
+}
+
+.cubeSelected {
+  margin-top: 10%;
+  transition-duration: 1s;
+  background: black;
+}
+
+.cube:hover {
+  background: black;
+}
+
+.navSelected {
+  font-style: italic;
+}
+
+#arts {
+  padding-left: 3.5%;
+}
+#comm {
+  padding-left: 5%;
+}
+
+#events {
+  padding-left: 3%;
+}
+
+#contact {
+  padding-left: 5%;
+}
+
+/******************************************
+/* ALT HOME              
+/*******************************************/
+#bodyHome {
+  background-color: black;
+  overflow-y:hidden;
+}
+
+#bodyHome .condensedNav{
+  color:white;
+  border: 3px solid white;
+}
+
+#homeAltHeader {
+  height: 0;
+}
+
+#homeAltHeader h1{
+  color:white;
+  font-size: 5em;
+  letter-spacing: .3em;
+  margin: 4%;
+  font-weight:normal;
+  visibility:hidden;
+}
+
+svg {
+  float:left;
+  margin-left:-40%;
+  margin-top:-25%;
+}
+
+#altTwoNav {
+  float:right;
+  width: 40%;
+  margin-top:-70%;
+  font-size: 2.5em;
+}
+
+#altTwoNav li {
+  float:none;
+  margin-bottom: 8%;
+  width: 70%;
+  display:none;
+  border-bottom: 3px solid black;
+}
+
+#altTwoNav li:hover {
+  border-bottom: 3px solid blue;
+  font-style: italic;
+  transform: rotateX(360deg);
+  transition: .7s ease-in-out;
+  transition-delay:0s;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2.5s ease-in forwards;
+  stroke-width:3px;
+  stroke-linecap: round;
+  stroke-linejoin:round;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/******************************************
+/* COWORKING                
+/*******************************************/
+
+#containerCoworking {
+  margin-top: 0;
+}
+
+#containerCoworking h1 {
+  font-size: 4em;
+  letter-spacing: .3em;
+  text-align: center;
+  margin-top: 0;
+}
+
+#coworkingAbout {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#coworkingAbout h2{
+  font-size: 3em;
+  letter-spacing: .5em;
+  margin:0;
+}
+
+#coworkingAbout img{
+  width: 45%;
+  float:left;
+  margin-right: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#coworkingAbout p{
+  font-family:"menlo";
+  font-size: 1.6em;
+  letter-spacing: .05em;
+  width: 45%;
+  float:left;
+  border-bottom: 5px dashed blue;
+  padding-bottom: 3%;
+}
+
+.aboutSections {
+  float:left;
+  margin: 5% auto;
+}
+
+.join {
+  width: 20%;
+}
+
+#coworkingFooter button {
+  float: right;
+  margin-top: 3.5%;
+}
+/******************************************
+/* ARTS                
+/*******************************************/
+
+#containerArts {
+  font-family: "menlo";
+}
+
+#artsBody {
+  margin: 5%;
+}
+
+#logoHome {
+     float: left;
+     width: 15%;
+}
+
+#artsHero {
+  background-image: url("../images/rin1.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+
+#artsHero button, #artsBody button {
+  margin: 5%;
+  margin-top: 3%;
+  width: 375px;
+  height: 70px;
+  font-size: 2em;
+  clear:both;
+}
+
+#artsBody button {
+  display: block;
+  width: 25%;
+  margin-top: 20%;
+  margin-left: 0;
+}
+
+.backgroundLayer {
+    background: linear-gradient(to left bottom, rgba(0,0,0,0) 49.85%, rgba(255,255,255,.8) 50%);
+    height: 100vh;
+}
+
+#artsHero h1 {
+     font-size: 6em;
+     letter-spacing: .2em;
+     font-family: Helvetica;
+     margin: 0% 5% .5% 5%;
+     padding-top: 25%;
+     font-weight: normal;
+   
+}
+
+#artsHero h2 {
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: .5em;
+  margin: 1% 5%;
+  text-transform: uppercase;
+  font-family: Helvetica;
+}
+
+
+#artsAbout h3, #artsAbout h4, #artists h3, #artists h4 {
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 3em;
+  letter-spacing: .2em;
+  margin-top: 8%;
+
+}
+
+#containerArts h3 {
+  font-weight: bold;
+}
+
+#artsAbout h4, #artists h4 {
+  font-size: 2em;
+}
+
+#artists h4 {
+  margin-top: 5%;
+  margin-left: 5%;
+  padding-top: .5%;
+}
+
+#artists a {
+  color: black;
+  border-bottom: 2px solid black;
+    padding: 3%;
+}
+
+#artists a:hover {
+  background: red;
+  color: white;
+  border: white;
+
+}
+
+#artists p {
+  font-size: 1.5em;
+  display: none;
+}
+
+#nora p, #yuri p{
+  display: inline-block;
+}
+
+#fall, #winter, #spring, #summer {
+  float: left;
+  margin: 0 5% 0 0;
+
+}
+
+
+
+#artsAbout p {
+  font-size: 1.7em;
+  line-height: 1.7;
+  letter-spacing: .05em;
+}
+
+#fall p, #winter p, #spring p, #summer p {
+  font-size: 1.5em;
+}
+
+.artistColumn {
+  width: 45%;
+  float: left;
+  margin-top: 0;
+}
+
+#artistColumnLeft {
+  margin-right: 10%;
+}
+
+.artistBio{
+  margin-top: 15%;
+}
+
+.artistColumn {
+  width: 45%;
+  float: left;
+  margin-top: 0;
+}
+
+#nora, #yuri {
+  margin-top: 0;
+}
+
+#artsFooter {
+
+  margin-top: 7.5%;
+  width: 100%;
+  display: inline-block;
+}
+
+.arrow-down {
+    width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid red;
+  float: left;
+  margin-right: 4%;
+  transform: rotateZ(90deg);
+  transition-duration: .2s;
+}
+
+/******************************************
+/* COMMUNITY                
+/*******************************************/
+
+
+#alphaDirectory {
+  width: 93%;
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-size: 2.5em;
+/*  font-weight:bold;*/
+
+}
+.directoryBox{
+  height: 38px;
+  width: 38px;
+  background-color: #D3D3D3;
+  margin: 5.5px;
+  clear:both;
+}
+
+.directoryBox:hover{
+  background-color: red;
+  transition-duration: .2s;
+}
+
+.hiddenBox, .hiddenBox:hover {
+  background-color: white;
+}
+
+.letters{
+  text-align: center;
+  float:left;
+  margin: 4px;
+
+}
+
+.hiddenLetters{
+  display: none;
+}
+
+#nameDirectory{
+  display: block;
+  font-family: "menlo";
+  margin: 5%;
+}
+
+.nameColumn {
+/*  float: left;
+  width: 42%;*/
+/*  margin-right: 5%;
+  margin-bottom: 10%;*/
+  margin: 10% 5% 10% 0%;
+}
+
+#nameDirectory h2 {
+  margin-top: 5%;
+  margin-left: 5%;
+  font-weight: normal;
+  font-size: 3em;
+  font-family: Helvetica;
+  letter-spacing: .3em;
+}
+
+#nameDirectory a {
+  color: black;
+  border-bottom: 2px solid black;
+  padding: 0% 1%;
+  display: inherit;
+
+}
+
+#nameDirectory a:hover {
+  font-style: italic;
+}
+
+#nameDirectory p {
+  font-size: 1.5em;
+  display: none;
+}
+
+#nameDirectory p a {
+  font-weight: bold;
+  float: right;
+  border-bottom: none;
+  font-family: Helvetica;
+  letter-spacing: .2em;
+  color: red;
+  font-size: 1em;
+
+}
+
+#nameDirectory p a:hover {
+  text-transform: uppercase;
+  background: white;
+  color:red;
+}
+
+/* add smooth scroll transition */
+
+/******************************************
+/* EVENTS                
+/*******************************************/
+
+#containerEvents h1{
+  text-align: center;
+  font-size: 4em;
+  letter-spacing: .3em;
+  margin-top:0;
+}
+
+.eventListing, .summary {
+  margin: 5%;
+  border-bottom: 5px dashed blue;
+  padding-bottom: 5%;
+  width: 40%;
+  float:left;
+  height:320px;
+}
+
+.eventListing p, .description{
+  font-size:1.8em;
+  font-family:"menlo";
+}
+
+.eventTitle{
+  font-size: 2.9em;
+  letter-spacing: .18em;
+  color:black;
+}
+
+.eventTitle:hover {
+  font-style: italic;
+  color:blue;
+}
+
+#containerEvents h3, .date {
+  font-size: 2em;
+  letter-spacing: .17em;
+  float:left;
+}
+
+#containerEvents h2{
+  font-size: .89em;
+  letter-spacing: .3em;
+  margin-top:0;
+}
+
+#eventArtist {
+  color:blue;
+  border-bottom: 2px solid blue;
+}
+
+#eventArtist:hover{
+   font-style: italic;
+}
+
+#eventArtist:hover{
+   font-style: italic;
+}
+
+/******************************************
+/* CONTACT                
+/*******************************************/
+
+#form {
+  width: 40%;
+  float: left;
+  margin: 5%;
+  border-top: 5px dashed blue;
+  border-left: 5px dashed blue;
+  padding: 2% 0 0 5%;
+  margin-top:3%;
+}
+
+#form h1{
+  letter-spacing: .2em;
+  text-align:center;
+}
+
+input, textarea{
+  font-size: 1.1em;
+  letter-spacing: .1em;
+  width: 100%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: transparent;
+  outline: none;
+  border: solid 2px;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+
+input:hover, textarea:hover {
+  background: rgb(220,220,220);
+}
+
+#form textarea {
+  height: 150px;
+  padding: 15px;
+  border: solid 2px;
+  font-family: "menlo";
+}
+
+#form input{
+  font-family:"menlo";
+}
+
+#submit {
+  width: 100%;
+  font-size: 1.5em;
+  letter-spacing: .2em;
+  font-family:"menlo";
+
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 2px;
+  border-top: none;
+}
+
+#submit:hover {
+  color: white;
+  background: blue;
+  border: solid 2px black;
+  border-top: none;
+  font-style: bold;
+  font-style: italic;
+}
+
+iframe {
+  display:none;
+}
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid red;
+  float: left;
+  margin-right: 4%;
+  transition-duration: .2s;
+}
+
+#contactInfo {
+  float: left;
+  width: 40%;
+  margin: 5%;
+  margin-top:4.5%;
+  font-size: 1.3em;
+  border-right: 5px dashed blue;
+  border-bottom: 5px dashed blue;
+  padding: 2%;
+  padding-bottom:0;
+}
+
+#contactInfo h2{
+  letter-spacing: .2em;
+  margin:0;
+  font-size: 1.7em;
+}
+
+#contactInfo p{
+  margin-top:2%;
+  margin-bottom:5%;
+  font-family:"menlo";
+  font-size: .9em;
+}
+
+#contactInfo #visit{
+  margin-bottom:0;
+}
+
+#contactInfo a{
+  color: blue;
+}
+
+#contactInfo a:hover{
+  font-style: italic;
+}
+
+.social{
+  width: 7%;
+  margin: 5%;
+  margin-left:0;
+}
+
+.social:hover{
+  transform: rotateY(360deg);
+  transition: .8s ease-in-out;
+  transition-delay:0s;
+}
+
+
