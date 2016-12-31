@@ -150,6 +150,34 @@ h5 {
 /* ADDITIONAL STYLES                   
 /*******************************************/
 
+@media(max-width: 940px) and (min-width: 630px) {
 
+  #container {
+    height: 95vh;
+  }
+
+  .realms {
+    height: 95px;
+  }
+}
+
+@media only screen and (max-width: 629px)  {
+  #credits, .realms {
+    display:none;
+  }
+
+  #container {
+    height: 95vh;
+  }
+
+  #console {
+    width: 100%;
+  }
+
+  #inventory {
+    margin-top: 70%;
+    padding-top:4%;
+  }
+}
 
 
