@@ -316,7 +316,7 @@ h1{
 }
 
 /******************************************
-/* RESUNE                   
+/* RESUME                   
 /*******************************************/
 
 #resume {
@@ -338,6 +338,10 @@ h2{
 
 .school{
      margin-bottom: 10px;
+}
+
+.tools p {
+  margin-bottom: 3%;
 }
 
 .experience {
