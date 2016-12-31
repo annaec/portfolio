@@ -14,7 +14,7 @@ $window.on('scroll', function(){
 
 //NAV ICON OPEN
 $(".condensedNav").on("click", function () {
-  $(".topNav").toggleClass("open");
+  $(".mobileNav").toggleClass("hidden");
 });
 
 
