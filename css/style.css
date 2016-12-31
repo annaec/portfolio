@@ -595,6 +595,19 @@ footer{
     margin-top:35%;
     font-size:.8em;
   }
+
+  #workContent img {
+    width: 85%;
+  }
+
+  #game, #play {
+  width: 98%;
+  margin-top:-20%;
+}
+
+#play {
+  margin-left: 11.5%;
+}
 }
 
 @media(max-width: 699px) and (min-width: 540px)  {
@@ -627,6 +640,19 @@ footer{
     margin-top:45%;
     font-size:.7em;
   }
+
+  #workContent img {
+    width: 85%;
+  }
+
+  #game, #play {
+  width: 98%;
+    margin-top:-20%;
+}
+
+#play {
+  margin-left: 11.5%;
+}
 }
 
 @media(max-width: 539px) and (min-width: 445px)  {
@@ -665,6 +691,19 @@ footer{
     margin-top:55%;
     font-size:.6em;
   }
+
+  #workContent img {
+    width:85%;
+  }
+
+#game, #play {
+  width: 98%;
+    margin-top:-20%;
+}
+
+#play {
+  margin-left: 12%;
+}
 }
 
 @media only screen and (max-width: 445px)  {
@@ -689,17 +728,32 @@ footer{
     padding-top:8%;
   }
 
-    .condensedNav {
+  .condensedNav {
     display:block;
     margin: -14% 0 0 70%;
-    padding-top: 5px;
+    padding-top:5px;
+
   }
+  
   .innerCondensedNav {
     margin-top:10%;
   }
 
-   .innerUl {
+  .innerUl {
     margin-top:75%;
     font-size:.5em;
   }
+
+  #workContent img {
+    width:84%;
+  }
+
+#game, #play {
+  width: 98%;
+    margin-top:-20%;
+}
+
+#play {
+  margin-left: 12%;
+}
 }
