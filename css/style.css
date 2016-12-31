@@ -292,6 +292,7 @@ h1{
   background-color:white;
   color:black;
   margin: 10% 0 0 70%;
+
 }
 
 .innerCondensedNav:hover {
@@ -557,6 +558,11 @@ footer{
   .condensedNav {
     display:block;
   }
+
+  .innerUl {
+    margin-top:30%;
+    font-size:.9em;
+  }
 }
 
 @media(max-width: 819px) and (min-width: 700px)  {
@@ -583,6 +589,11 @@ footer{
 
     .condensedNav {
     display:block;
+  }
+
+  .innerUl {
+    margin-top:35%;
+    font-size:.8em;
   }
 }
 
@@ -611,6 +622,10 @@ footer{
     .condensedNav {
     display:block;
     margin-left: 80%;
+  }
+    .innerUl {
+    margin-top:45%;
+    font-size:.7em;
   }
 }
 
@@ -641,6 +656,15 @@ footer{
     margin-left: 80%;
     margin-top: -12%;
   }
+
+  .innerCondensedNav {
+    margin-top:10%;
+  }
+
+  .innerUl {
+    margin-top:55%;
+    font-size:.6em;
+  }
 }
 
 @media only screen and (max-width: 445px)  {
@@ -668,5 +692,13 @@ footer{
     .condensedNav {
     display:block;
     margin: -14% 0 0 70%;
+  }
+  .innerCondensedNav {
+    margin-top:10%;
+  }
+
+   .innerUl {
+    margin-top:75%;
+    font-size:.5em;
   }
 }
