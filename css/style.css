@@ -692,10 +692,10 @@ footer{
     .condensedNav {
     display:block;
     margin: -14% 0 0 70%;
+    padding-top: 5px;
   }
   .innerCondensedNav {
     margin-top:10%;
-    padding-top: 5px;
   }
 
    .innerUl {
